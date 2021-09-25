@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "ZooChess.h"
 #include "MyBlueprintFunctionLibrary.h"
+#include "ZooChess.h"
 #include <algorithm>
 #include <string>
 #include <type_traits>
