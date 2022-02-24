@@ -25,4 +25,7 @@ class ZOOCHESS_API UMyBlueprintFunctionLibrary : public UBlueprintFunctionLibrar
 
     UFUNCTION(BluePrintCallable, Category="save")
         static bool SalvarArquivo(FString Texto, FString NomeArquivo);
+		
+	UFUNCTION(BluePrintCallable, Category="save")
+        static bool ExecutaStockFish(FString Texto2);
 };

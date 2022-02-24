@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "MyBlueprintFunctionLibrary.h"
+#include "GenericPlatform/GenericPlatformProcess.h"
 #include "ZooChess.h"
 #include <algorithm>
 #include <string>
@@ -46,6 +47,29 @@
  {
      return FFileHelper::LoadFileToString(SaveTextA, *(FPaths::ProjectDir() + FileNameA));
  }
+ 
+ 
+ bool UMyBlueprintFunctionLibrary::ExecutaStockFish(FString Texto2)
+ {	 
+	//if(GEngine)
+      //GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Some debug message!"));
+  
+  
+	//FPlatformProcess::CreateProc(TEXT("C:\\Users\\User\\Desktop\\Galaxian\\Chess\\Unreal\\ZooChess\\Python\\chess.exe"), nullptr, true, false, false, nullptr, 0, nullptr, nullptr);
+	//FPlatformProcess::CreateProc(TEXT("C:\\Users\\User\\Desktop\\Galaxian\\Chess\\Unreal\\ZooChess\\Python\\chess.exe"), nullptr, false, false, false, nullptr, 0, nullptr, nullptr);
+	//return true;
+	 //FPlatformProcess::ExecProcess(TEXT("C:\\Users\\User\\Desktop\\Galaxian\\Chess\\Unreal\\ZooChess\\Python\\chess.exe"), nullptr, false, false, false);
+	 
+	 
+		
+	return FPlatformProcess::ExecProcess(TEXT("C:\\Users\\User\\Desktop\\Galaxian\\Chess\\Unreal\\ZooChess\\Python\\chess.exe"), nullptr, false, false, false); 
+	//return true	 ;
+     
+ }
+ 
+ 
+ 
+ 
 
  bool UMyBlueprintFunctionLibrary::SalvarArquivo(FString Texto, FString NomeArquivo)
  {
